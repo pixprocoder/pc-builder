@@ -17,7 +17,7 @@ const ProductCard = ({ product }: ProductCardProps) => (
       alt="banner"
     /> */}
     <h1>{product?.productName}</h1>
-    <p>Status: {product.status}</p>
+    <p>Status: {product?.status}</p>
     <p>{product?.price}</p>
 
     <Button type="primary">Buy Now</Button>
