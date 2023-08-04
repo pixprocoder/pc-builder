@@ -19,7 +19,7 @@ function HomePage() {
             src={banner1}
             alt="Slider"
           />
-          {/* <h3 style={contentStyle}>1</h3> */}
+          {/* <h3 style={contentStyle}>1hii</h3> */}
         </div>
         <div>
           <Image
