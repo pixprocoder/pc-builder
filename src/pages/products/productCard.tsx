@@ -10,12 +10,12 @@ interface ProductCardProps {
 
 const ProductCard = ({ product }: ProductCardProps) => (
   <Card hoverable>
-    {/* <Image
+    <Image
       width={250}
       height={250}
       src={product?.image && product?.image}
       alt="banner"
-    /> */}
+    />
     <h1>{product?.productName}</h1>
     <p>Status: {product?.status}</p>
     <p>{product?.price}</p>

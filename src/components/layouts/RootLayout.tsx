@@ -20,7 +20,7 @@ const RootLayout = ({ children }: ChildrenProps) => {
         }}
       >
         <Button type="primary">
-          <Link href="/">Logo</Link>
+          <Link href="/">Pc-Builder</Link>
         </Button>
         <Menu theme="dark" mode="horizontal" defaultSelectedKeys={["2"]}>
           <div className="flex flex-col lg:flex-row z-10 gap-4">

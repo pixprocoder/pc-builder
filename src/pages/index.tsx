@@ -13,34 +13,18 @@ function HomePage() {
   return (
     <section>
       <Carousel autoplay>
-        <div>
-          <Image
-            style={{ width: "100%", borderRadius: "10px" }}
-            src={banner1}
-            alt="Slider"
-          />
+        <div className="w-full">
+          <Image style={{ borderRadius: "10px" }} src={banner1} alt="Slider" />
           {/* <h3 style={contentStyle}>1hii</h3> */}
         </div>
-        <div>
-          <Image
-            style={{ width: "100%", borderRadius: "10px" }}
-            src={banner2}
-            alt="Slider"
-          />
+        <div className="w-full">
+          <Image style={{ borderRadius: "10px" }} src={banner2} alt="Slider" />
         </div>
-        <div>
-          <Image
-            style={{ width: "100%", borderRadius: "10px" }}
-            src={banner3}
-            alt="Slider"
-          />
+        <div className="w-full">
+          <Image style={{ borderRadius: "10px" }} src={banner3} alt="Slider" />
         </div>
-        <div>
-          <Image
-            style={{ width: "100%", borderRadius: "10px" }}
-            src={banner4}
-            alt="Slider"
-          />
+        <div className="w-full">
+          <Image style={{ borderRadius: "10px" }} src={banner4} alt="Slider" />
         </div>
       </Carousel>
       <FeaturesProductPage />

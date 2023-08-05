@@ -48,7 +48,7 @@ const FeatureCardPage = () => {
               const { image, product_name, price, status, rating } = product;
               return (
                 <Card style={{ width: "350px" }} key={i} hoverable>
-                  {/* <Image width={150} height={150} src={image} alt="banner" />  */}
+                  <Image width={150} height={150} src={image} alt="banner" />
                   <h1>{product_name}</h1>
                   <p>{price}</p>
                   <p>Status: {status}</p>
