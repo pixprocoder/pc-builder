@@ -9,24 +9,20 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@ant-design/icons": "^5.1.4",
-    "@types/node": "20.4.5",
-    "@types/react": "18.2.17",
-    "@types/react-dom": "18.2.7",
-    "antd": "^5.7.3",
-    "autoprefixer": "10.4.14",
-    "eslint": "8.46.0",
-    "eslint-config-next": "13.4.12",
-    "mongoose": "^7.4.1",
-    "next": "13.4.12",
-    "postcss": "8.4.27",
+    "@ant-design/icons": "^5.2.6",
+    "@ant-design/nextjs-registry": "^1.0.0",
+    "antd": "^5.12.7",
+    "next": "14.0.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "sharp": "^0.32.4",
-    "tailwindcss": "3.3.3",
-    "typescript": "5.1.6"
+    "typescript": "^5.3.3"
   },
   "main": "index.js",
   "author": "skpixels <makkobir79@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "20.10.6",
+    "@types/react": "^18.2.46",
+    "eslint-config-next": "^14.0.4"
+  }
 }
