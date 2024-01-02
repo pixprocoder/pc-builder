@@ -1,4 +1,4 @@
-import { Card } from "antd";
+import { Card, Col, Row } from "antd";
 import { categories } from "@/constants";
 import { CloseSquareOutlined } from "@ant-design/icons";
 import Link from "next/link";
@@ -16,18 +16,26 @@ function FeaturesProductPage() {
       >
         Feature Catagories
       </h1>
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      <Row gutter={[8, 8]}>
         {categories.map((el) => (
-          <Link key={el.key} href={`/feature-products/${el.key}`}>
-            <Card hoverable className="text-center">
-              <div className="flex flex-col">
-                <CloseSquareOutlined className="text-5xl" />
-                {el.key}
-              </div>
-            </Card>
-          </Link>
+          <Col
+            lg={{ span: 6 }}
+            md={{ span: 8 }}
+            sm={{ span: 12 }}
+            xs={{ span: 24 }}
+            key={el.key}
+          >
+            <Link href={`/feature-products/${el.key}`}>
+              <Card hoverable className="text-center">
+                <div className="flex flex-col">
+                  <CloseSquareOutlined className="text-5xl" />
+                  {el.key}
+                </div>
+              </Card>
+            </Link>
+          </Col>
         ))}
-      </div>
+      </Row>
     </section>
   );
 }

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import ProductCard from "./productCard";
 import { IProduct } from "@/constants/interface";
+import { Col, Row } from "antd";
 
 function LatestProductPage() {
   const [products, setProducts] = useState<IProduct[]>([]);
@@ -34,11 +35,20 @@ function LatestProductPage() {
         Latest Products
       </h1>
 
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      <Row gutter={[8, 8]}>
         {products.map((product) => (
-          <ProductCard key={product.id} product={product} />
+          <Col
+            lg={{ span: 6 }}
+            md={{ span: 8 }}
+            sm={{ span: 12 }}
+            xs={{ span: 24 }}
+            key={product.id}
+            className="gutter"
+          >
+            <ProductCard product={product} />
+          </Col>
         ))}
-      </div>
+      </Row>
     </section>
   );
 }
