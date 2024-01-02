@@ -1,13 +1,10 @@
 "use client";
 import { navItems } from "@/constants";
 import { Layout, Menu, theme } from "antd";
+import { useState } from "react";
 
 const { Header } = Layout;
 
-const items = new Array(15).fill(null).map((_, index) => ({
-  key: index + 1,
-  label: `nav ${index + 1}`,
-}));
 const Navbar = () => {
   const {
     token: { colorBgContainer, borderRadiusLG },
@@ -22,9 +19,14 @@ const Navbar = () => {
           theme="dark"
           mode="horizontal"
           defaultSelectedKeys={["2"]}
-          items={items}
           style={{ flex: 1, minWidth: 0 }}
-        />
+        >
+          {navItems.map((item) => (
+            <Menu.Item key={item.key}>
+              <span>{item.text}</span>
+            </Menu.Item>
+          ))}
+        </Menu>
       </Header>
     </Layout>
   );
