@@ -8,10 +8,12 @@ import banner3 from "../assets/images/banner/banner-3.jpg";
 import banner4 from "../assets/images/banner/banner-4.jpg";
 import LatestProductPage from "./products/page";
 import FeaturesProductPage from "./feature-products/page";
+import Navbar from "./(with-layout)/shared/Navbar";
 
 function HomePage() {
   return (
     <section>
+      <Navbar />
       <Carousel autoplay>
         <div className="w-full">
           <Image style={{ borderRadius: "10px" }} src={banner1} alt="Slider" />
