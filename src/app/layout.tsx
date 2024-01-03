@@ -1,18 +1,13 @@
-import { AntdRegistry } from "@ant-design/nextjs-registry";
-import React from "react";
+import "./globals.css";
 
 export default function RootLayout({
-  // Layouts must accept a children prop.
-  // This will be populated with nested layouts or pages
   children,
 }: {
-  children: React.PropsWithChildren | any;
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en">
-      <body>
-        <AntdRegistry>{children}</AntdRegistry>
-      </body>
+      <body>{children}</body>
     </html>
   );
 }
