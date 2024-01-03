@@ -8,29 +8,47 @@ import banner3 from "../assets/images/banner/banner-3.jpg";
 import banner4 from "../assets/images/banner/banner-4.jpg";
 import LatestProductPage from "./products/page";
 import FeaturesProductPage from "./feature-products/page";
-import Navbar from "./(with-layout)/shared/Navbar";
+import Navbar from "@/components/shared/Navbar";
 
 function HomePage() {
   return (
     <section>
       <Navbar />
-      <Carousel autoplay>
-        <div className="w-full">
-          <Image style={{ borderRadius: "10px" }} src={banner1} alt="Slider" />
-          {/* <h3 style={contentStyle}>1hii</h3> */}
-        </div>
-        <div className="w-full">
-          <Image style={{ borderRadius: "10px" }} src={banner2} alt="Slider" />
-        </div>
-        <div className="w-full">
-          <Image style={{ borderRadius: "10px" }} src={banner3} alt="Slider" />
-        </div>
-        <div className="w-full">
-          <Image style={{ borderRadius: "10px" }} src={banner4} alt="Slider" />
-        </div>
-      </Carousel>
-      <FeaturesProductPage />
-      <LatestProductPage />
+      <div style={{ maxWidth: "1400px", margin: "0 auto" }}>
+        <Carousel autoplay>
+          <div className="w-full">
+            <Image
+              style={{ borderRadius: "10px" }}
+              src={banner1}
+              alt="Slider"
+            />
+            {/* <h3 style={contentStyle}>1hii</h3> */}
+          </div>
+          <div className="w-full">
+            <Image
+              style={{ borderRadius: "10px" }}
+              src={banner2}
+              alt="Slider"
+            />
+          </div>
+          <div className="w-full">
+            <Image
+              style={{ borderRadius: "10px" }}
+              src={banner3}
+              alt="Slider"
+            />
+          </div>
+          <div className="w-full">
+            <Image
+              style={{ borderRadius: "10px" }}
+              src={banner4}
+              alt="Slider"
+            />
+          </div>
+        </Carousel>
+        <FeaturesProductPage />
+        <LatestProductPage />
+      </div>
     </section>
   );
 }
