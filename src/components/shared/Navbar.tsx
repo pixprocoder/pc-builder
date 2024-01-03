@@ -13,22 +13,37 @@ const Navbar = () => {
 
   return (
     <Layout>
-      <Header style={{ display: "flex", alignItems: "center" }}>
-        <div className="demo-logo"></div>
-
-        <Menu
-          theme="dark"
-          mode="horizontal"
-          style={{ flex: 1, minWidth: 0, maxWidth: "1400px", margin: "0 auto" }}
+      <Header>
+        <div
+          style={{
+            maxWidth: "1400px",
+            margin: "0 auto",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
         >
-          {navItems.map((item) => (
-            <Menu.Item key={item.key}>
-              <Link href="/" type="primary">
-                {item.text}
-              </Link>
-            </Menu.Item>
-          ))}
-        </Menu>
+          <div>
+            <Button type="primary">Logo</Button>
+          </div>
+          <Menu
+            theme="dark"
+            mode="horizontal"
+            style={{
+              flex: 1,
+              minWidth: 0,
+            }}
+          >
+            {navItems.map((item) => (
+              <Menu.Item key={item.key}>
+                <Link href="/" type="primary">
+                  {item.text}
+                </Link>
+              </Menu.Item>
+            ))}
+          </Menu>
+          <Button type="primary">Build Pc</Button>
+        </div>
       </Header>
     </Layout>
   );
