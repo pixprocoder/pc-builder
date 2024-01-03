@@ -1,10 +1,17 @@
+import { requiredPcParts } from "@/constants";
 import React from "react";
+import PcBuildCard from "./PcBuildCard";
 
 const PcBuild = () => {
   return (
-    <div>
+    <>
       <h1>Build your pc</h1>
-    </div>
+      {requiredPcParts.map((item) => (
+        <PcBuildCard key={item.key} item={item} />
+      ))}
+
+      <button>COMPLETE BUILD</button>
+    </>
   );
 };
 

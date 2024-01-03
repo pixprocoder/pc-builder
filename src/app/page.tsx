@@ -7,8 +7,8 @@ function HomePage() {
     <section>
       <div style={{ maxWidth: "1400px", margin: "0 auto" }}>
         <Banner />
-        <FeaturesProductPage />
         <LatestProductPage />
+        <FeaturesProductPage />
       </div>
     </section>
   );

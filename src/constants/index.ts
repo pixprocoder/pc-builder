@@ -8,6 +8,7 @@ export const categories = [
   { href: "/", key: "Others", text: "Others" },
 ];
 export const navItems = [
+  { href: "/", key: "HOME", text: "HOME" },
   { href: "/cpu", key: "CPU", text: "CPU" },
   { href: "/motherboard", key: "Motherboard", text: "Motherboard" },
   { href: "/ram", key: "RAM", text: "RAM" },
@@ -15,4 +16,21 @@ export const navItems = [
   { href: "/storage", key: "Storage", text: "Storage Device" },
   { href: "/monitor", key: "Monitor", text: "Monitor" },
   { href: "/others", key: "Others", text: "Others" },
+];
+
+export const requiredPcParts = [
+  { href: "/feature-products/cpu", key: "CPU", text: "CPU" },
+  {
+    href: "/feature-products/motherboard",
+    key: "Motherboard",
+    text: "Motherboard",
+  },
+  { href: "/feature-products/ram", key: "RAM", text: "RAM" },
+  {
+    href: "/feature-products/power-supply",
+    key: "Power ",
+    text: "Power Supply Unit",
+  },
+  { href: "/feature-products/storage", key: "Storage", text: "Storage Device" },
+  { href: "/feature-products/monitor", key: "Monitor", text: "Monitor" },
 ];

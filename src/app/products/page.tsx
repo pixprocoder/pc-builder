@@ -3,10 +3,20 @@ import React from "react";
 
 const ProductPage = () => {
   return (
-    <div>
+    <section style={{ margin: "50px 0" }}>
+      <h1
+        style={{
+          fontSize: "3rem",
+          fontWeight: "Black",
+          textAlign: "center",
+          color: "rgb(0, 195, 255)",
+          marginBottom: "10px",
+        }}
+      >
+        Latest Features Products
+      </h1>
       <Products />
-      <h1>Hello world</h1>
-    </div>
+    </section>
   );
 };
 

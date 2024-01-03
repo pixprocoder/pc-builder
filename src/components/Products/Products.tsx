@@ -26,17 +26,6 @@ const Products = () => {
 
   return (
     <section>
-      <h1
-        style={{
-          fontSize: "3rem",
-          fontWeight: "Black",
-          textAlign: "center",
-          color: "rgb(0, 195, 255)",
-        }}
-      >
-        Latest Products
-      </h1>
-
       <Row gutter={[8, 8]}>
         {products.map((product) => (
           <Col
