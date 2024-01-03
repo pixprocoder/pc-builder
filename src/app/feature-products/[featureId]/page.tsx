@@ -6,21 +6,19 @@ import { IProduct } from "@/constants/interface";
 
 import Image from "next/image";
 import Link from "next/link";
+import { useAppDispatch } from "@/redux/hooks";
+import { addToBuild } from "@/redux/features/product/productSlice";
 
 const FeatureCardPage = ({ params }: any) => {
   const [products, setProducts] = useState<IProduct[]>([]);
   const [loading, setLoading] = useState(true);
 
-  const clickedItem = params.featureId;
-  const matched = products.find((p) => p?.category?.name === clickedItem);
-  const categoryProducts = matched?.category?.products;
+  const dispatch = useAppDispatch();
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(
-          "https://pc-builder-backend-zeta.vercel.app/products"
-        );
+        const response = await fetch("http://localhost:5000/api/v1/products");
         const data = await response.json();
         setProducts(data);
         setLoading(false);
@@ -32,6 +30,9 @@ const FeatureCardPage = ({ params }: any) => {
 
     fetchData();
   }, []);
+  const clickedItem = params.featureId;
+  const matched = products.find((p) => p?.category?.name === clickedItem);
+  const categoryProducts = matched?.category?.products;
   return (
     <>
       <h1 className="text-4xl text-center text-black py-4">
@@ -55,7 +56,12 @@ const FeatureCardPage = ({ params }: any) => {
                   <p>{rating}</p>
 
                   <div className="flex flex-col gap-2">
-                    <Button type="primary">Buy Now</Button>
+                    <Button
+                      type="primary"
+                      onClick={() => dispatch(addToBuild(product))}
+                    >
+                      Add To Build
+                    </Button>
                     <Button>Add to collection</Button>
                   </div>
                 </Card>

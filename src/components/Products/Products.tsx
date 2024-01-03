@@ -11,9 +11,7 @@ const Products = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(
-          "https://pc-builder-backend-zeta.vercel.app/products"
-        );
+        const response = await fetch("http://localhost:5000/api/v1/products");
         const data = await response.json();
         setProducts(data);
       } catch (error) {

@@ -8,9 +8,7 @@ import { useState } from "react";
 const { Header } = Layout;
 
 const Navbar = () => {
-  const [selectedKey, setSelectedKey] = useState<null | string[] | undefined>(
-    []
-  );
+  const [selectedKey, setSelectedKey] = useState([]);
 
   const {
     token: { colorBgContainer, borderRadiusLG },
