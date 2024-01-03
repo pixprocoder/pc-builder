@@ -3,10 +3,15 @@ import { navItems } from "@/constants";
 
 import { Button, Layout, Menu, theme } from "antd";
 import Link from "next/link";
+import { useState } from "react";
 
 const { Header } = Layout;
 
 const Navbar = () => {
+  const [selectedKey, setSelectedKey] = useState<null | string[] | undefined>(
+    []
+  );
+
   const {
     token: { colorBgContainer, borderRadiusLG },
   } = theme.useToken();
@@ -24,25 +29,35 @@ const Navbar = () => {
           }}
         >
           <div>
-            <Button type="primary">Logo</Button>
+            <Button type="primary">
+              <Link href="/">Logo</Link>
+            </Button>
           </div>
           <Menu
             theme="dark"
             mode="horizontal"
+            selectedKeys={selectedKey}
             style={{
               flex: 1,
               minWidth: 0,
+              marginLeft: "10px",
+              background: "transparent",
             }}
           >
             {navItems.map((item) => (
-              <Menu.Item key={item.key}>
-                <Link href="/" type="primary">
+              <Menu.Item
+                style={{ background: "transparent !important" }}
+                key={item.key}
+              >
+                <Link href={item.href} type="primary">
                   {item.text}
                 </Link>
               </Menu.Item>
             ))}
           </Menu>
-          <Button type="primary">Build Pc</Button>
+          <Button type="primary">
+            <Link href="/pc-build">Build Pc</Link>
+          </Button>
         </div>
       </Header>
     </Layout>

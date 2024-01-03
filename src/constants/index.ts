@@ -8,8 +8,8 @@ export const categories = [
   { href: "/", key: "Others", text: "Others" },
 ];
 export const navItems = [
-  { href: "/", key: "CPU", text: "CPU" },
-  { href: "/", key: "Motherboard", text: "Motherboard" },
+  { href: "/cpu", key: "CPU", text: "CPU" },
+  { href: "/motherboard", key: "Motherboard", text: "Motherboard" },
   { href: "/", key: "RAM", text: "RAM" },
   { href: "/", key: "Power ", text: "Power Supply Unit" },
   { href: "/", key: "Storage", text: "Storage Device" },
