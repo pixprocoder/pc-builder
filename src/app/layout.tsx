@@ -12,7 +12,14 @@ export default function RootLayout({
       <Providers>
         <body>
           <Navbar />
-          {children}
+          <main
+            style={{
+              maxWidth: "1400px",
+              margin: "0 auto",
+            }}
+          >
+            {children}
+          </main>
         </body>
       </Providers>
     </html>
