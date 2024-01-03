@@ -1,5 +1,7 @@
 "use client";
 import { navItems } from "@/constants";
+import { setText } from "@/redux/features/counterSlice";
+import { useAppDispatch } from "@/redux/hooks";
 import { Layout, Menu, theme } from "antd";
 import { useState } from "react";
 
@@ -9,6 +11,14 @@ const Navbar = () => {
   const {
     token: { colorBgContainer, borderRadiusLG },
   } = theme.useToken();
+
+  const dispatch = useAppDispatch();
+
+  const handle = (e) => {
+    e.preventDefault();
+
+    dispatch(setText(e.target.test.value));
+  };
 
   return (
     <Layout>
@@ -28,6 +38,10 @@ const Navbar = () => {
           ))}
         </Menu>
       </Header>
+      <form onSubmit={handle}>
+        <input id="test" type="text" />
+        <button type="submit">click here</button>
+      </form>
     </Layout>
   );
 };
